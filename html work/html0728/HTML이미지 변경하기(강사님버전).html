@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <img id="image" src="drum.jpg">
+    <script>
+    var imgNum = 1;
+    function changeImage() {
+      if(imgNum == 1) {
+        document.getElementById("image").src = "drum2.jpg";
+        imgNum = 2;
+      }else{
+        document.getElementById("image").src = "drum3.jpg";
+        imgNum = 1;
+      }
+    }
+    </script>
+    <input type="button" onclick="changeImage()" value="click!"/>
+  </body>
+</html>

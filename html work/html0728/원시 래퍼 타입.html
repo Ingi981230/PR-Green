@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+    var falseObject = new Boolean(false);
+    var result = falseObject && true;// 인스턴스가 생성되어 있느냐 있지 않느냐에 대해 true
+    //or false 가려짐 그렇기 때문에 falseObject라는 인스턴스가 생성이 되어 있으니까 true 가 됨
+    document.write(result + " ");
+
+    var falseValue = false;
+    result = falseValue && true;
+    document.write(result);
+
+    alert(typeof falseObject);
+    alert(typeof falseValue);
+    alert(falseObject instanceof Boolean);
+    alert(falseValue instanceof Boolean);
+    </script>
+  </body>
+</html>

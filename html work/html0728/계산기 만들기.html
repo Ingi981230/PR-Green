@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script>
+      var expression = "";
+
+      function add(character) {
+        expression = expression + character;
+        document.getElementById("display").value = expression;
+      }
+      function compute() {
+        document.getElementById("display").value = eval(expression);
+      }
+      function clearDisplay() {
+        expression = "";
+        document.getElementById("display").value = 0;
+      }
+    </script>
+  </head>
+ <body>
+      <form>
+        display <input id="display" value="0" size="30">
+        <br>
+        <td><input type="button" id="seven" value="7" onclick="addInput(this.value)"></td>
+        <td><input type="button" id="eight" value="8" onclick="addInput(this.value)"></td>
+        <td><input type="button" id="nine" value="9" onclick="addInput(this.value)"></td>
+        <td><input type="button" id="divide" value="/" onclick="addInput(this.value)"></td>
+        <br>
+        <input type="button" value="  4  " onclick="addInput(this.value)">
+        <input type="button" value="  5  " onclick="addInput(this.value)">
+        <input type="button" value="  6  " onclick="addInput(this.value)">
+        <input type="button" value="  *  " onclick="addInput(this.value)">
+        <br>
+        <input type="button" value="  1  " onclick="addInput(this.value)">
+        <input type="button" value="  2  " onclick="addInput(this.value)">
+        <input type="button" value="  3  " onclick="addInput(this.value)">
+        <input type="button" value="  -  " onclick="addInput(this.value)">
+        <br>
+        <input type="button" value="  0  " onclick="addInput(this.value)">
+        <input type="button" value="  +  " onclick="addInput(this.value)">
+        <br>
+        <input type="button" value="Clear" onclick="clearDisplay()">
+        <input type="button" value="Enter" name="enter" onclick="compute()">
+      </form>
+  </body>
+</html>
